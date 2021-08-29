@@ -1,0 +1,48 @@
+
+.header-section{
+    border: solid;
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    
+
+}
+
+.home {
+    margin-left: 1%;
+    font-size: 1.1rem;
+}
+
+ .login {
+ display:inline-block;
+ margin-left: 76%;
+ font-size: 1.1rem;
+}
+
+.createaccount{
+    display:inline-block;
+    margin-left: 2%;
+    font-size: 1.1rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 6rem;
+}
+
+.twitter-icon {
+    height: 2rem;
+    justify-content: flex-end;
+    background-color:blue;
+}
+
+.twitter-icon:hover {
+    background-color: blue;
+}
+
+.li-icon {
+    height: 2rem;
+
+    background-color:red;
+}

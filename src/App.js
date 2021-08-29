@@ -7,8 +7,11 @@ import Authorization from './Auth.js';
 
 class HomePage extends Component {
   render() { 
-    return <h1>You got some stuff To Do!</h1>;
-  }
+    return ( 
+    <>
+    <h1 className='title'>Zoo-Lander!</h1>
+    </>
+    )}
 }
 
 
