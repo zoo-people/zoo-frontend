@@ -10,7 +10,7 @@ class Authorization extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(this.state.email, this.state.password)
+        
         const token = await getToken(
             {
                 email: this.state.email,
