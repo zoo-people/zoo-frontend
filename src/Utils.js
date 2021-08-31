@@ -1,4 +1,5 @@
-const URL = 'https://rocky-island-84837.herokuapp.com'
+//const URL = 'https://rocky-island-84837.herokuapp.com'
+const URL = 'http://localhost:7890';
 
 export async function getToken(login, type) {
     const authURL = `${URL}/auth/${type}`;
@@ -14,27 +15,31 @@ export async function getToken(login, type) {
     return data.token;
 }
 
-export async function getZoos(token){
-    const userZoos = `${URL}/api/zoos`
-    const resp = await fetch (userZoos, {
+
+export async function getHabitats(token) {
+    const url = `${URL}/api/habitats`;
+    const resp = await fetch(url, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-        Authorization:
-            token,
+             Authorization: token,
         },
     });
     const data = await resp.json();
     return data;
-};
+}
 
-export async function creatZoo(token, todo){
-    const zoosUrl = `${URL}/api/zoos`;
-    const resp = await fetch(zoosUrl, {
-        method: 'POST',
+
+export async function getAnimalsByHabitat(token, hab_id) {
+    const url = `${URL}/api/animals/${hab_id}`;
+    const resp = await fetch(url, {
+        method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-
-        }
-    })
+             Authorization: token,
+        },
+        // body: JSON.stringify(hab_data)
+    });
+    const data = await resp.json();
+    return data;
 }

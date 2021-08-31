@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 
 class HabitatItem extends Component {
+
+
     render() {
+
+        const {name, image, id} = this.props.habitat
+        const {onChange} =this.props
         return(
             <div>
-                <input type='radio' className='habitat-btn'>
-                    <img src= {this.props.habitat.image} alt={this.props.habitat.name}/>
-                </input>
+                <input type='radio' className='habitat-btn' name='habitat-select' value={id} onChange={onChange}/>{name}
+                    <img src= {image} alt={name} />
+                
             </div>
         )
     }

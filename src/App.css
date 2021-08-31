@@ -1,8 +1,16 @@
 html {
-  background-color: blue;
+  background-image:linear-gradient(rgba(128, 128, 128, 0.317), rgba(0, 0, 255, 0.379)), url('https://img.freepik.com/free-vector/animals-theme-template-vector-illustration_53876-56693.jpg?size=626&ext=jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bear {
   background-color: blue;
   border-radius: 50%;
+}
+
+img{
+
+  height:100px;
+  width:100px;
 }

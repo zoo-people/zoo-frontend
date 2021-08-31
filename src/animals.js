@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import Habitat from './habitat';
 
 class Animals extends Component {
     state = {  }
     render() { 
-        return (  );
+        return ( <h1>
+            ${Habitat}animals
+        </h1> );
     }
 }
  
