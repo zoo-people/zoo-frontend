@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HabitatItem from './habitat-item.js';
-import { getHabitats } from './Utils.js'
+import { getHabitats, getAnimalsByHabitat } from './Utils.js'
 
 
 
@@ -8,6 +8,9 @@ import { getHabitats } from './Utils.js'
 class Habitat extends Component {
     state = { 
         habitats: [],
+        hab_id:0,
+        animals:[],
+        radio_selected:''
         
      }
 
@@ -20,6 +23,20 @@ class Habitat extends Component {
 
          this.setState({ habitats: data });
      };
+
+
+
+    fetchAnimals = async () => {
+        
+        const data = await getAnimalsByHabitat(this.props.token, {hab_id:this.state.radio_selected} );
+
+        this.setState({ animals: data });
+    }
+
+    getHabitatId = (e) => {
+
+        this.setState({radio_selected:e.target.value})
+    }
 
     //  handleSubmit = async (e) => {
     //      e.preventDefault();
@@ -43,9 +60,10 @@ class Habitat extends Component {
                 <h1>Habitats</h1>
                     <div>
                         {this.state.habitats.map((item) => {
-                            return <HabitatItem key={item.id} habitat={item} />
+                            return <HabitatItem key={item.id} habitat={item}  onChange={this.getHabitatId}/>
                         })}
                     </div>
+                    <button onClick={this.fetchAnimals}>Get Animals</button>
                 
             </>
          );

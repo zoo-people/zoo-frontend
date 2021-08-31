@@ -28,3 +28,18 @@ export async function getHabitats(token) {
     const data = await resp.json();
     return data;
 }
+
+
+export async function getAnimalsByHabitat(token, habitat_data) {
+    const url = `${URL}/api/animals-by-habitat`;
+    const resp = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+             Authorization: token,
+        },
+        body: JSON.stringify(habitat_data)
+    });
+    const data = await resp.json();
+    return data;
+}
