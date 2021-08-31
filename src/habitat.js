@@ -28,14 +28,17 @@ class Habitat extends Component {
 
     fetchAnimals = async () => {
         
-        const data = await getAnimalsByHabitat(this.props.token, {hab_id:this.state.radio_selected} );
-
+        const data = await getAnimalsByHabitat(this.props.token, this.state.radio_selected);
+        console.log(this.state.radio_selected);
+        console.log(typeof this.state.radio_selected);
         this.setState({ animals: data });
+        console.log(data);
     }
 
     getHabitatId = (e) => {
 
-        this.setState({radio_selected:e.target.value})
+        this.setState({radio_selected:Number(e.target.value)})
+
     }
 
     //  handleSubmit = async (e) => {
