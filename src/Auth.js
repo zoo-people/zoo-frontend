@@ -19,7 +19,7 @@ class Authorization extends Component {
             this.props.type
         );
         this.props.setToken(token);
-        this.props.history.push('/habitat')
+        this.props.history.push('/habitats')
     }
 
     render() { 
