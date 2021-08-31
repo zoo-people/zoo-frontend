@@ -9,8 +9,8 @@ class HabitatItem extends Component {
         const {name, image} = this.props.habitat
         return(
             <div>
-                <input type='radio' className='habitat-btn'/>{name}
-                    <img src= {image} alt={name}/>
+                <input type='radio' className='habitat-btn' name='habitat-select'/>{name}
+                    <img src= {image} alt={name} />
                 
             </div>
         )
