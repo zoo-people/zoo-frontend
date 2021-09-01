@@ -1,5 +1,5 @@
-//const URL = 'https://rocky-island-84837.herokuapp.com'
-const URL = 'http://localhost:7890';
+const URL = 'https://rocky-island-84837.herokuapp.com'
+// const URL = 'http://localhost:7890';
 
 export async function getToken(login, type) {
     const authURL = `${URL}/auth/${type}`;
