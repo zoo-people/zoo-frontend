@@ -26,7 +26,11 @@ class HabitatDetail extends Component {
                  </h1>
                 <div>
                     {this.state.animals.map((item) => (
-                        <div>{item.name}</div>
+                        <>
+                        <div className='animal-card'>
+                        <h1>{item.name}</h1><img src={item.icon_url} key={item.name} alt={item.name} />
+                        </div>
+                        </>
                     ))} 
                     
                 </div>
