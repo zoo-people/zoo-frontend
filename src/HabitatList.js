@@ -5,7 +5,7 @@ import { getHabitats, getAnimalsByHabitat } from './Utils.js'
 
 
 
-class Habitat extends Component {
+class HabitatList extends Component {
     state = { 
         habitats: [],
         hab_id:0,
@@ -26,19 +26,16 @@ class Habitat extends Component {
 
 
 
-    fetchAnimals = async () => {
-        
-        const data = await getAnimalsByHabitat(this.props.token, this.state.radio_selected);
-        console.log(this.state.radio_selected);
-        console.log(typeof this.state.radio_selected);
-        this.setState({ animals: data });
-        console.log(data);
-    }
+   
 
     getHabitatId = (e) => {
 
         this.setState({radio_selected:Number(e.target.value)})
 
+    }
+
+    redirect  = (e) => {
+        this.props.history.push(`/habitats/${this.state.radio_selected}`)
     }
 
     //  handleSubmit = async (e) => {
@@ -66,11 +63,11 @@ class Habitat extends Component {
                             return <HabitatItem key={item.id} habitat={item}  onChange={this.getHabitatId}/>
                         })}
                     </div>
-                    <button onClick={this.fetchAnimals}>Get Animals</button>
+                    <button onClick={this.redirect}>Get Animals</button>
                 
             </>
          );
     }
 }
  
-export default Habitat;
+export default HabitatList;
