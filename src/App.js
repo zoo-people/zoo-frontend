@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import Habitat from './habitat.js'
 import './App.css'
-
 import Header from './Header.js';
-
 import Authorization from './Auth.js';
+import HabitatDetail from './HabitatDetail.js';
+import HabitatList from './HabitatList.js';
 
 class HomePage extends Component {
   render() { 
@@ -54,10 +53,10 @@ class App extends Component {
             />
 
           <Route
-              path='/habitats'
+              exact path='/habitats'
               render={(routerProps) =>
                 this.state.token ? (
-                  <Habitat
+                  <HabitatList
                   token={this.state.token}
                   
                   {...routerProps} />
@@ -65,8 +64,22 @@ class App extends Component {
                   <Redirect to='/login' />
                 )
               }
+              
             />
-
+          <Route
+              exact path='/habitats/:id'
+              render={(routerProps) =>
+                this.state.token ? (
+                  <HabitatDetail
+                  token={this.state.token}
+                  
+                  {...routerProps} />
+                ) : (
+                  <Redirect to='/login' />
+                )
+              }
+              
+            />
             </Switch>
           </section>
           </BrowserRouter>
