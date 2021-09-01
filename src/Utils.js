@@ -44,6 +44,20 @@ export async function getAnimalsByHabitat(token, hab_id) {
     return data;
 }
 
+export async function getZoos(token) {
+    const url = `${URL}/api/zoos`;
+    const resp = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+             Authorization: token,
+        },
+        // body: JSON.stringify(hab_data)
+    });
+    const data = await resp.json();
+    return data;
+}
+
 export async function postZoo(token, object) {
     const zooURL = `${URL}/api/zoos`;
     const resp = await fetch(zooURL, {
