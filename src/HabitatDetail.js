@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { getAnimalsByHabitat } from './Utils.js';
+import './Habitat-item.css';
 
 
 class HabitatDetail extends Component {
@@ -21,7 +22,7 @@ class HabitatDetail extends Component {
         return (
             <>     
                 <h1>
-                    animals
+                    Animals
                  </h1>
                 <div>
                     {this.state.animals.map((item) => (

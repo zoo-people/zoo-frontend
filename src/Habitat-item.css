@@ -1,0 +1,7 @@
+.habitat-div{
+    display: grid;
+    border:solid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+  
+}

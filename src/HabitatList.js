@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import HabitatItem from './habitat-item.js';
 import { getHabitats, getAnimalsByHabitat } from './Utils.js'
 
+import './Habitat-item.css';
+
 
 
 
@@ -58,7 +60,7 @@ class HabitatList extends Component {
         return ( 
             <>
                 <h1>Habitats</h1>
-                    <div>
+                    <div className='habitat-div'>
                         {this.state.habitats.map((item) => {
                             return <HabitatItem key={item.id} habitat={item}  onChange={this.getHabitatId}/>
                         })}

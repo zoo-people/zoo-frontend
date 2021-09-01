@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 
+
 class HabitatItem extends Component {
 
 
@@ -9,9 +10,9 @@ class HabitatItem extends Component {
         const {name, image, id} = this.props.habitat
         const {onChange} =this.props
         return(
-            <div>
+            <div className='habitat-div'>
                 <input type='radio' className='habitat-btn' name='habitat-select' value={id} onChange={onChange}/>{name}
-                    <img src= {image} alt={name} />
+                    <img className='habitat-img' src= {image} alt={name} />
                 
             </div>
         )

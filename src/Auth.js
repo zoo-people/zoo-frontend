@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './Auth.css';
 import { getToken } from './Utils.js';
 
 class Authorization extends Component {
@@ -25,7 +25,11 @@ class Authorization extends Component {
     render() { 
         return ( 
             <>
-            <h1>{this.getType()}</h1>
+            
+            <section className='log-section'>
+            <div className='title-div'>
+            <h1 className='log-title'>{this.getType()}</h1>
+            </div>
             <form onSubmit={this.handleSubmit}>
                 <div className="form">
                     <label>Email: </label>
@@ -41,8 +45,11 @@ class Authorization extends Component {
                         placeholder='Password'
                         onChange={(e) => this.setState({ password: e.target.value })} />
                 </div>
-                <button>{this.getType()}</button>
+                <div className='btn-div'>
+                <button className='account-btn'>{this.getType()}</button>
+                </div>
             </form>
+            </section>
             </>
 
          );

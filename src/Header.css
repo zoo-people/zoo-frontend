@@ -1,48 +1,86 @@
-
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.227),rgba(255, 255, 255, 0.489)) ,url('https://ae01.alicdn.com/kf/HTB1qGnYibSYBuNjSspiq6xNzpXat/Baby-Birthday-Photography-Backdrop-photobooth-background-Cartoon-jungle-Wall-Decoration-XT-6715-HUAYI.jpg');
+    background-size:100%;
+    background-repeat: repeat;
+}
 .header-section{
     border: solid;
     display: flex;
-    height: 3rem;
+    justify-content: flex-end;
+    height: 4rem;
     width: 100%;
     
 
 }
 
 .home {
-    margin-left: 1%;
-    font-size: 1.1rem;
+   margin-right: 20%;
+    padding: 1%;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: white;
+    border:solid;
+    font-family: fantasy;
 }
 
  .login {
  display:inline-block;
- margin-left: 76%;
- font-size: 1.1rem;
+ font-family: fantasy;
+ padding: 1%;
+ font-size: 1.2rem;
+ background-color: white;
+ border:solid;
 }
 
 .createaccount{
     display:inline-block;
-    margin-left: 2%;
-    font-size: 1.1rem;
+    font-family: fantasy;
+    padding: 1%;
+    font-size: 1.2rem;
+    background-color: white;
+    border: solid;
+}
+
+.log-auth{
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    border: solid;
 }
 
 .icons {
     display: flex;
-    justify-content: space-evenly;
-    width: 6rem;
+    border: solid;
+
+
 }
 
 .twitter-icon {
-    height: 2rem;
-    justify-content: flex-end;
-    background-color:blue;
+    height: 3.5rem;
+    background-color:yellow;
+    border: solid;
 }
 
 .twitter-icon:hover {
-    background-color: blue;
+    background-color: yellowgreen;
 }
 
 .li-icon {
-    height: 2rem;
+    height: 3.5rem;
+    background-color:blue;
+    border: solid;
+}
 
-    background-color:red;
+.li-icon:hover {
+    background-color: darkblue;
+}
+
+.aboutus{
+    display:inline-block;
+    font-family: fantasy;
+    padding: 1%;
+    font-size: 1.1rem;
+    background-color: white;
+    border: solid;
 }
