@@ -6,9 +6,10 @@ import './Habitat-item.css';
 class HabitatDetail extends Component {
     state = { 
         animals: [],
-        animalsSelected: false
-    
+        selectedIds: []
+        
             }
+            
         componentDidMount() {
             this.fetchAnimals()
         }
@@ -24,20 +25,26 @@ class HabitatDetail extends Component {
                  await postZoo(this.props.token, {
                    
                     user_id: 1,
-                    animal_ids: this.state.animals,
+                    animal_ids: this.state.selectedIds,
                     
                     
                 });
+                console.log(e.target)
                
         
                 this.redirect();
                 
             };
             redirect  = (e) => {
-                this.props.history.push(`/zoos/${this.state.animals.habitat_id}`)
+                this.props.history.push(`/zoo`)
             }
-            handleSelected = async (e) => {
-               this.setState({animals:[...this.state.animals, e.target.value]})
+            handleSelected = async (id) => {
+                if(this.state.selectedIds.includes(id)) {
+                    this.setState(prevState => ({ selectedIds: prevState.selectedIds.filter((item) => item !== id) }))
+                } else {
+                    this.setState(prevState => ({ selectedIds: [...prevState.selectedIds, id] }))
+                }
+               console.log(id);
             }
     render() { 
         return (
@@ -47,18 +54,20 @@ class HabitatDetail extends Component {
                     Animals
                 </h1>
                 <div>
+                 
                 <form onSubmit={this.handleSubmit}> 
-              
+
                     {this.state.animals.map((item) => (
-                        <>
+                        <> 
                         <div className='animal-card'>
                         <h1>{item.name}</h1>
-                        <input type="checkbox" name="animal-pic" value={item.id} onChange={this.handleSelected} >
+                        <input type="checkbox" name="animal-pic" value={item.id} onChange={() => this.handleSelected(item.id)}>
                         </input>
                         <img src={item.icon_url} key={item.name} alt={item.name} />
                         </div>
                         </>
-                    ))} 
+                    )
+                    )} 
                     <button >Submit Animals</button>
                 </form>
                 </div>

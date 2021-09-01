@@ -5,6 +5,7 @@ import Header from './Header.js';
 import Authorization from './Auth.js';
 import HabitatDetail from './HabitatDetail.js';
 import HabitatList from './HabitatList.js';
+import Zoo from './Zoo.js';
 
 class HomePage extends Component {
   render() { 
@@ -79,6 +80,20 @@ class App extends Component {
                 )
               }
               
+            />
+            <Route path='/zoo'
+            render={(routerProps) => 
+            this.state.token ? (
+              <Zoo
+              token={this.state.token}
+
+              {...routerProps} />
+
+            ) : (
+              <Redirect to='/login' />
+            )
+          }
+    
             />
             </Switch>
           </section>
