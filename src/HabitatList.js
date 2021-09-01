@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HabitatItem from './habitat-item.js';
-import { getHabitats, getAnimalsByHabitat } from './Utils.js'
+import { getHabitats } from './Utils.js'
+
 
 import './Habitat-item.css';
 
@@ -40,22 +41,6 @@ class HabitatList extends Component {
         this.props.history.push(`/habitats/${this.state.radio_selected}`)
     }
 
-    //  handleSubmit = async (e) => {
-    //      e.preventDefault();
-    //      const data = await chooseHabitat(this.props.token, {
-    //         name:'x',
-    //     });
-
-    //      this.setState({ zoo_habitats:'x' })
-    //      this.setState((prevState) => ({
-    //          habitats: [...prevState.habitats, data],
-    //      }));
-
-    // handleSelected = async (habitat) => {
-    //     habitat.submited = habitat.submited;
-    //     await updateZoo()
-    // }
-    //  };
     render() { 
         return ( 
             <>
