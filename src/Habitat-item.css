@@ -5,3 +5,11 @@
     grid-template-rows: 2fr;
   
 }
+
+.animal-card {
+    border: solid;
+    display: grid;
+    grid-template-rows: 1fr ;
+    grid-template-columns: 1fr 1fr;
+    margin: 5%;
+}
