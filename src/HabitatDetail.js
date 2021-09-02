@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { getAnimalsByHabitat, postZoo } from './Utils.js';
-import './Habitat-item.css';
 
 
 class HabitatDetail extends Component {
+
     state = { 
         animals: [],
         selectedIds: []
-        
             }
-            
+
+
         componentDidMount() {
             this.fetchAnimals()
+            
         }
 
         fetchAnimals = async () => {
@@ -20,32 +21,36 @@ class HabitatDetail extends Component {
             this.setState({ animals: data });
             console.log(data);
         }
+
         handleSubmit = async (e) => {
-                 e.preventDefault();
-                 await postZoo(this.props.token, {
-                   
-                    user_id: 1,
-                    animal_ids: this.state.selectedIds,
-                    
-                    
-                });
-                console.log(e.target)
+            e.preventDefault();
+            await postZoo(this.props.token, {
+              
+               user_id: 1,
+               animal_ids: this.state.selectedIds,
                
-        
-                this.redirect();
-                
-            };
-            redirect  = (e) => {
-                this.props.history.push(`/zoo`)
+               
+           });
+           console.log(e.target)
+          
+   
+           this.redirect();
+           
+       };
+
+        redirect  = (e) => {
+            this.props.history.push(`/zoo`)
+        }
+
+        handleSelected = async (id) => {
+            if(this.state.selectedIds.includes(id)) {
+                this.setState(prevState => ({ selectedIds: prevState.selectedIds.filter((item) => item !== id) }))
+            } else {
+                this.setState(prevState => ({ selectedIds: [...prevState.selectedIds, id] }))
             }
-            handleSelected = async (id) => {
-                if(this.state.selectedIds.includes(id)) {
-                    this.setState(prevState => ({ selectedIds: prevState.selectedIds.filter((item) => item !== id) }))
-                } else {
-                    this.setState(prevState => ({ selectedIds: [...prevState.selectedIds, id] }))
-                }
-               console.log(id);
-            }
+           console.log(id);
+        }
+
     render() { 
         return (
             <>   
