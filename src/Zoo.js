@@ -71,7 +71,7 @@ class Zoo extends Component {
 
                     <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
                     <img className='animal-class' src={item.icon_url} alt={item.name} />
-                    <h1>{item.animal_id.name}</h1>
+                    <h1>{item.name}</h1>
                     <h2>{item.species_name}</h2>
                     <p>{item.description}</p>
                     <p>{item.diet}</p>

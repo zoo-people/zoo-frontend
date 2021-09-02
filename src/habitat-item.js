@@ -7,12 +7,12 @@ class HabitatItem extends Component {
 
     render() {
 
-        const {name, image, id} = this.props.habitat
+        const {habitat, image, id} = this.props.habitat
         const {onChange} =this.props
         return(
             <div className='habitat-div'>
-                <input type='radio' className='habitat-btn' name='habitat-select' value={id} onChange={onChange}/>{name}
-                    <img className='habitat-img' src= {image} alt={name} />
+                <input type='radio' className='habitat-btn' name='habitat-select' value={id} onChange={onChange}/>{habitat}
+                    <img className='habitat-img' src= {image} alt={habitat} />
                 
             </div>
         )
