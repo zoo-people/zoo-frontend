@@ -26,6 +26,7 @@
      
     padding: 5px;
     position: absolute;
+    animation: left-to-right infinite 4s ease-in-out alternate;
 }
 
 
@@ -38,3 +39,19 @@
     background-image:radial-gradient(rgba(0, 128, 0, 0.096), rgba(165, 42, 42, 0.2));
     padding: 1%;
 }
+
+@keyframes left-to-right{
+    100%{
+      transform: translateX(10%) ;
+      
+    }
+    50%{
+      transform: translatey(1%) ;
+      
+    }
+    10%{
+        transform: translatey(10%) ;
+        
+      }
+  }
+  
