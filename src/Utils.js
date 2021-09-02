@@ -74,7 +74,7 @@ export async function postZoo(token, object) {
 }
 
 export async function deleteAnimal(token, obj) {
-    const zooURL = `${URL}/api/zoos`;
+    const zooURL = `${URL}/api/zoos/${obj.animal_id}`;
     const resp = await fetch (zooURL, {
         method: 'DELETE',
         headers: {

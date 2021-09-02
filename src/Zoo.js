@@ -29,15 +29,19 @@ class Zoo extends Component {
         this.setState({ selectedIds: [...this.state.selectedIds, e.target.value] })
     }
 
-    handleSubmit = async (e) => {
+    handleSubmit = (e) => {
         e.preventDefault();
-        await deleteAnimal(this.props.token, {
-           
-           user_id: 1,
-           animal_ids: this.state.selectedIds,
-           
-           
-       });
+        this.state.selectedIds.map(async(item) => {
+            console.log('HELLO I AM HEREa')
+            await deleteAnimal(this.props.token, {
+               user_id: 1,
+               animal_id: item,
+            });
+        })
+ 
+               
+        console.log(this.state.selectedIds);
+
        console.log(e.target)
       
 
@@ -56,15 +60,15 @@ class Zoo extends Component {
             <h1>Hello</h1>
             <form>
             {this.state.zoos.map((item) => (
-                <div key={item.id} >
-                    <input type='checkbox' className={isActive ? 'hidden' : null} value={item.id} onChange={this.handleDelete}></input>
+                <div key={item.animal_id} >
+                    <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
                     <img src={item.icon_url} alt={item.name} />
                     {/* <img src={item.habitat_id.habitat_url} key={item.name} alt={item.name} /> */}
                     <p>{item.description}</p>
                 </div>
             ))}
             <button onClick={this.handleToggle}>Delete</button>
-            <button onSubmit={this.handleSubmit} className={isActive ? 'hidden' : null}>Update</button>
+            <button onClick={this.handleSubmit} className={isActive ? 'hidden' : null}>Update</button>
             </form>
             
             </>
