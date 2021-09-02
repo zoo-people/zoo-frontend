@@ -1,7 +1,19 @@
-const URL = 'https://rocky-island-84837.herokuapp.com'
-// const URL = 'http://localhost:7890';
+require('dotenv').config();
+// const URL = 'https://rocky-island-84837.herokuapp.com'
+const URL = 'http://localhost:7890';
+
+
+
+export async function setProfilePic() {
+    const apiResp = await fetch(
+      `https://api.giphy.com/v1/gifs/random?api_key=${process.env.REACT_APP_GIPHY_KEY}&tag=animal&rating=g
+    `);
+    const results  = await apiResp.json();
+    localStorage.setItem('USERPIC', results.data.image_url)
+  }
 
 export async function getToken(login, type) {
+    await setProfilePic();
     const authURL = `${URL}/auth/${type}`;
     const resp = await fetch(authURL, {
         method: 'POST',
@@ -9,12 +21,17 @@ export async function getToken(login, type) {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(login),
+
     });
     const data = await resp.json();
     localStorage.setItem('Token', data.token);
     return data.token;
 }
-
+// get profile pics for user
+export function getProfilePic() {
+ return localStorage.getItem('USERPIC');
+  
+}
 
 export async function getHabitats(token) {
     const url = `${URL}/api/habitats`;
@@ -22,7 +39,7 @@ export async function getHabitats(token) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-             Authorization: token,
+             'Authorization': token,
         },
     });
     const data = await resp.json();
@@ -36,7 +53,7 @@ export async function getAnimalsByHabitat(token, hab_id) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-             Authorization: token,
+             'Authorization': token,
         },
         // body: JSON.stringify(hab_data)
     });
@@ -50,7 +67,7 @@ export async function getZoos(token) {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-             Authorization: token,
+             'Authorization': token,
         },
         // body: JSON.stringify(hab_data)
     });
@@ -64,7 +81,7 @@ export async function postZoo(token, object) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: token
+            'Authorization': token
             
         },
         body: JSON.stringify(object),
@@ -79,10 +96,11 @@ export async function deleteAnimal(token, obj) {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
-            Authorization: token
+            'Authorization': token
         },
         body: JSON.stringify(obj),
     });
     const data = await resp.json();
     return data.token;
 }
+
