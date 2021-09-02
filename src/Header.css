@@ -2,34 +2,44 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.227),rgba(255, 255, 255, 0.489)) ,url('https://ae01.alicdn.com/kf/HTB1qGnYibSYBuNjSspiq6xNzpXat/Baby-Birthday-Photography-Backdrop-photobooth-background-Cartoon-jungle-Wall-Decoration-XT-6715-HUAYI.jpg');
     background-size:100%;
     background-repeat: repeat;
+    height: 10rem;
 }
+
+a {
+    text-decoration: none;
+    color: rgba(241, 245, 237, 0.884);
+
+}
+
+a:hover {
+    color: yellow;
+}
+
 .header-section{
-    border: solid;
     display: flex;
     justify-content: flex-end;
-    height: 4rem;
+    height: 10rem;
     width: 100%;
-    
-
 }
 
 .home {
-   margin-right: 20%;
-    padding: 1%;
+    margin-right: 20%;
     font-size: 1.5rem;
     text-align: center;
-    background-color: white;
-    border:solid;
+    width: 100%;
     font-family: fantasy;
 }
 
  .login {
- display:inline-block;
- font-family: fantasy;
- padding: 1%;
- font-size: 1.2rem;
- background-color: white;
- border:solid;
+    display:inline-block;
+    font-family: fantasy;
+    padding: 1%;
+    font-size: 1.2rem;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    /* border:solid; */
+    height: 3.5em;
+    width: 3.5em;
+    margin-right: 5px;
 }
 
 .createaccount{
@@ -37,8 +47,11 @@ header {
     font-family: fantasy;
     padding: 1%;
     font-size: 1.2rem;
-    background-color: white;
-    border: solid;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    /* border: solid; */
+    height: 3.5em;
+    width: 3.5em;
+    
 }
 
 .log-auth{
@@ -46,20 +59,22 @@ header {
     display: flex;
     flex-direction: row;
     text-align: center;
-    border: solid;
+    /* border: solid */
 }
 
 .icons {
     display: flex;
-    border: solid;
-
-
+    /* border: solid; */
+    margin-top: 6rem;
 }
 
 .twitter-icon {
-    height: 3.5rem;
+    height: 3.5em;
+    width: 3.5em;
     background-color:yellow;
-    border: solid;
+    color: white;
+    margin-inline:1rem;
+    /* border: solid; */
 }
 
 .twitter-icon:hover {
@@ -67,9 +82,12 @@ header {
 }
 
 .li-icon {
-    height: 3.5rem;
+    height: 3.5em;
+    width: 3.5em;
     background-color:blue;
-    border: solid;
+    color: white;
+    /* border: solid; */
+ 
 }
 
 .li-icon:hover {
@@ -79,8 +97,41 @@ header {
 .aboutus{
     display:inline-block;
     font-family: fantasy;
-    padding: 1%;
-    font-size: 1.1rem;
-    background-color: white;
-    border: solid;
+    font-size: 1.1em;
+    /* background-color: rgba(255, 255, 255, 0.445); */
+    height: 4em;
+    width: 5.5em;
+    margin-right: 5px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.App-header-text{
+    display: flex;
+    font-size: 5rem;
+    font-weight: 900;
+    width: 100%;
+    margin: 3rem;
+    color: rgba(241, 245, 237, 0.884);
+}
+  
+  .rotate{
+    width:4.5rem;
+    height:4.5rem;
+    padding:5px;
+    animation: rotation infinite 15s linear;
+  }
+
+  @keyframes rotation{
+    from{
+      transform:rotate(0deg);
+    }
+  
+    to{
+      transform:rotate(360deg);
+    }
+  }
+  
+span.App-header-text {
+    margin: 2rem;
 }

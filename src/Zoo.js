@@ -21,8 +21,8 @@ class Zoo extends Component {
         
     }
 
-    handleToggle = (e) => {
-        e.preventDefault();
+    handleToggle = () => {
+       
         this.setState({ isActive: !this.state.isActive });
     };
 
@@ -72,7 +72,9 @@ class Zoo extends Component {
                     <img className='animal-class' src={item.icon_url} alt={item.name} />
 
                     <section className='animal-info'>
-                    <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
+                        
+                    <input type='checkbox' className={isActive ? 'isActive' : 'inActive' } value={item.animal_id} onChange={this.handleDelete}></input>
+
                     <h1 className='animal-name'>{item.name}</h1>
                     <h2>{item.species_name}</h2>
                     <h3>{item.diet}</h3>
@@ -86,9 +88,9 @@ class Zoo extends Component {
                
             ))}
             </section>
-            <button onClick={this.handleToggle}>Delete</button>
-            <button onClick={this.handleSubmit} className={isActive ? 'hidden' : null}>Update</button>
+            <button onClick={this.handleSubmit} id="submit" className={isActive ? 'isActive' : 'inActive'}>Update</button>
             </form>
+            <button onClick={this.handleToggle}>Delete</button>
             <button onClick={this.redirectHabitat}>Add More Animals</button>
             
             </>
