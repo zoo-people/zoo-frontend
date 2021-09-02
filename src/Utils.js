@@ -1,5 +1,5 @@
-const URL = 'https://rocky-island-84837.herokuapp.com'
-// const URL = 'http://localhost:7890';
+// const URL = 'https://rocky-island-84837.herokuapp.com'
+const URL = 'http://localhost:7890';
 
 export async function getToken(login, type) {
     const authURL = `${URL}/auth/${type}`;
@@ -68,6 +68,20 @@ export async function postZoo(token, object) {
             
         },
         body: JSON.stringify(object),
+    });
+    const data = await resp.json();
+    return data.token;
+}
+
+export async function deleteAnimal(token, obj) {
+    const zooURL = `${URL}/api/zoos`;
+    const resp = await fetch (zooURL, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            Authorization: token
+        },
+        body: JSON.stringify(obj),
     });
     const data = await resp.json();
     return data.token;
