@@ -1,6 +1,6 @@
 require('dotenv').config();
-// const URL = 'https://rocky-island-84837.herokuapp.com'
-const URL = 'http://localhost:7890';
+const URL = 'https://rocky-island-84837.herokuapp.com'
+// const URL = 'http://localhost:7890';
 
 
 
