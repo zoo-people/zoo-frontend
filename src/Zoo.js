@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getZoos, deleteAnimal } from './Utils.js'
-
+import './zoo.css';
 
 
 
@@ -10,14 +10,15 @@ class Zoo extends Component {
         zoos: [],
         selectedIds:[]
     }
-
     componentDidMount() {
         this.fetchZoos()
+        console.log(this.state.zoos)
     }
-
+    
     fetchZoos = async () => {
         const data = await getZoos(this.props.token);
-        this.setState({ zoos: data});
+        this.setState({ zoos: data})
+        
     }
 
     handleToggle = (e) => {
@@ -37,6 +38,7 @@ class Zoo extends Component {
                user_id: 1,
                animal_id: item,
             });
+            this.fetchZoos();
         })
  
                
@@ -51,25 +53,40 @@ class Zoo extends Component {
    redirect  = (e) => {
        this.props.history.push(`/zoo`)
    }
-
-    
+   redirectHabitat  = (e) => {
+    this.props.history.push(`/habitats`)
+}
+   
     render() { 
         const isActive = this.state.isActive
         return (  
             <>
             <h1>Hello</h1>
             <form>
+                <section className='zoo-section'>
             {this.state.zoos.map((item) => (
-                <div key={item.animal_id} >
+                <><div
+                    className='zoo-div' key={item.animal_id}>
+                    <img className='habitat-background' src={item.image} key={item.name} alt={item.name} />
+
                     <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
-                    <img src={item.icon_url} alt={item.name} />
-                    {/* <img src={item.habitat_id.habitat_url} key={item.name} alt={item.name} /> */}
+                    <img className='animal-class' src={item.icon_url} alt={item.name} />
+                    <h1>{item.name}</h1>
+                    <h2>{item.species_name}</h2>
                     <p>{item.description}</p>
+                    <p>{item.diet}</p>
+
+              
                 </div>
+                
+                </>
+               
             ))}
+            </section>
             <button onClick={this.handleToggle}>Delete</button>
             <button onClick={this.handleSubmit} className={isActive ? 'hidden' : null}>Update</button>
             </form>
+            <button onClick={this.redirectHabitat}>Add More Animals</button>
             
             </>
             //delete toggle/button converts divs to form

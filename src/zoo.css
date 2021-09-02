@@ -1,3 +1,29 @@
 .hidden {
     
 }
+
+.zoo-div{
+    position: relative;
+}
+
+.zoo-section{
+    border: solid;
+}
+
+.habitat-background{
+    width: 50rem;
+    max-width: 50rem;
+}
+
+
+.animal-class{
+    width: 8rem;
+    height: 8rem;
+
+    margin: 5rem;
+    position: absolute;
+    top: 8.5rem;
+    left: 15rem; 
+     
+    padding: 5px;position: absolute;
+}
