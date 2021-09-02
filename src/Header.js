@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import './Header.css'
+import UserProfile from './UserProfile.js';
 
 class Header extends Component {
     state = {  }
@@ -9,7 +10,7 @@ class Header extends Component {
         return ( 
             <header>
             <section className='header-section'>
-           
+           <UserProfile />
             <NavLink className='home' to='/' exact>Zoo-Lander</NavLink>
             
             <section className='icons'>

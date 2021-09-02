@@ -10,7 +10,6 @@ class Authorization extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        
         const token = await getToken(
             {
                 email: this.state.email,
@@ -19,6 +18,7 @@ class Authorization extends Component {
             this.props.type
         );
         this.props.setToken(token);
+        
         this.props.history.push('/habitats')
     }
 
