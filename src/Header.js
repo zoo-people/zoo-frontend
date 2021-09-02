@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import './Header.css'
+import UserProfile from './UserProfile.js';
 
 class Header extends Component {
     state = {  }
@@ -9,13 +10,17 @@ class Header extends Component {
         return ( 
             <header>
             <section className='header-section'>
-           
+
             <NavLink className='home' to='/' exact>
             <span className="App-header-text">
 ZO
 <img src="https://image.flaticon.com/icons/png/512/814/814513.png"className="rotate"/>LANDER
 </span>
             </NavLink>
+
+           <UserProfile />
+            
+
             
             <section className='icons'>
             <NavLink className='aboutus' to='/aboutus'>About Us</NavLink>
