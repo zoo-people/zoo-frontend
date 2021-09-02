@@ -69,12 +69,15 @@ class Zoo extends Component {
                     className='zoo-div' key={item.animal_id}>
                     <img className='habitat-background' src={item.image} key={item.name} alt={item.name} />
 
-                    <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
                     <img className='animal-class' src={item.icon_url} alt={item.name} />
-                    <h1>{item.name}</h1>
+
+                    <section className='animal-info'>
+                    <input type='checkbox' className={isActive ? 'hidden' : null} value={item.animal_id} onChange={this.handleDelete}></input>
+                    <h1 className='animal-name'>{item.name}</h1>
                     <h2>{item.species_name}</h2>
+                    <h3>{item.diet}</h3>
                     <p>{item.description}</p>
-                    <p>{item.diet}</p>
+                    </section>
 
               
                 </div>

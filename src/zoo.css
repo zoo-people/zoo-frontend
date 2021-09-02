@@ -1,6 +1,4 @@
-.hidden {
-    
-}
+
 
 .zoo-div{
     position: relative;
@@ -13,17 +11,30 @@
 .habitat-background{
     width: 50rem;
     max-width: 50rem;
+    opacity: 90%;
 }
 
 
 .animal-class{
     width: 8rem;
     height: 8rem;
-
+    box-shadow: 3px 50% 50%;
     margin: 5rem;
     position: absolute;
     top: 8.5rem;
     left: 15rem; 
      
-    padding: 5px;position: absolute;
+    padding: 5px;
+    position: absolute;
+}
+
+
+.animal-name{
+    font-size: 2rem;
+}
+
+.animal-info{
+    text-align: center;
+    background-image:radial-gradient(rgba(0, 128, 0, 0.096), rgba(165, 42, 42, 0.2));
+    padding: 1%;
 }
