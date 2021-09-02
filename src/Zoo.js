@@ -8,16 +8,18 @@ class Zoo extends Component {
     state = { 
         zoos: [],
     }
-
     componentDidMount() {
         this.fetchZoos()
+        console.log(this.state.zoos)
     }
-
+    
     fetchZoos = async () => {
         const data = await getZoos(this.props.token);
-        this.setState({ zoos: data});
+        this.setState({ zoos: data})
+        
     }
-
+    
+    
     render() { 
         return (  
             <>
@@ -25,6 +27,7 @@ class Zoo extends Component {
             {this.state.zoos.map((item) => (
                 <div>
                     <img src={item.icon_url} key={item.name} alt={item.name} />
+                
                     <p>{item.description}</p>
                 </div>
             ))}
