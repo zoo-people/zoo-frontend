@@ -14,8 +14,10 @@
 
 
 .habitat-background{
-    /* width: 50rem; */
+    width: 777px;
     max-width: 50rem;
+    height: 437px;
+    max-height: 60rem;
     opacity: 90%;
     max-width: 100%;
 }

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { getZoos, deleteAnimal } from './Utils.js'
 import './zoo.css';
-
+import UserProfile from './UserProfile.js';
+import './UserProfile.css';
 
 
 class Zoo extends Component {
@@ -61,7 +62,7 @@ class Zoo extends Component {
         const isActive = this.state.isActive
         return (  
             <>
-            <h1>Hello</h1>
+            <UserProfile />
             <form>
                 <section className='zoo-section'>
             {this.state.zoos.map((item) => (

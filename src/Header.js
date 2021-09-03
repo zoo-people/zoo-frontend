@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import { NavLink } from 'react-router-dom';
 import './Header.css'
-import UserProfile from './UserProfile.js';
 
 class Header extends Component {
     state = {  }
@@ -19,7 +18,7 @@ ZO
             </NavLink>
 </div>
 
-           <UserProfile />
+      
             
 
             
