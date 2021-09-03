@@ -6,6 +6,7 @@ import Authorization from './Auth.js';
 import HabitatDetail from './HabitatDetail.js';
 import HabitatList from './HabitatList.js';
 import Zoo from './Zoo.js';
+import AboutUs from './aboutUs';
 
 class HomePage extends Component {
   render() { 
@@ -92,6 +93,16 @@ class App extends Component {
             ) : (
               <Redirect to='/login' />
             )
+          }
+    
+            />
+
+          <Route path='/aboutus'
+            render={(routerProps) => 
+             (
+              <AboutUs 
+              {...routerProps}/>
+              )
           }
     
             />

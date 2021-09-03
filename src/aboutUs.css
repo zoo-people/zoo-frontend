@@ -1,0 +1,28 @@
+
+.about-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    background-image:
+    linear-gradient(
+        rgba(0, 251, 255, 0.45), 
+        rgba(0, 255, 81, 0.386)
+      ),
+      url('https://cur.glitter-graphics.net/pub/3725/3725180dffu68sck8.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.headshot{
+    max-width: 7.3em;
+    max-height: 7.3em;
+    border: solid rgb(83, 94, 105) .3rem;
+    border-radius: 6%;
+}
+/* .about-us{
+     border: solid 5px black;
+ 
+}  */

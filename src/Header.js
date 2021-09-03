@@ -10,13 +10,14 @@ class Header extends Component {
         return ( 
             <header>
             <section className='header-section'>
-
+            <div className='header-div'>
             <NavLink className='home' to='/' exact>
             <span className="App-header-text">
 ZO
 <img src="https://image.flaticon.com/icons/png/512/814/814513.png"className="rotate"/>LANDER
 </span>
             </NavLink>
+</div>
 
            <UserProfile />
             
