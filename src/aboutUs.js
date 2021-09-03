@@ -14,25 +14,29 @@ class AboutUs extends Component {
                 <div className='about-us'>
                     <h1>Evon Perez</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C4E03AQHLUlJoJru0jw/profile-displayphoto-shrink_200_200/0/1629895114670?e=1635984000&v=beta&t=dZpIaUVdOLWxCpaA8jEBFefmMcGhMFKVs5-srYsYy5w'></img>
-                    <p>description</p>
+                    <p>
+                    Software Engineer
+Fun Fact: On my free time, I like to paint/draw.
+                    </p>
+                  
                 </div>
                 <div className='about-us'>
                     <h1>Justin Soto</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C4D03AQE921pYwVRg2A/profile-displayphoto-shrink_200_200/0/1624289622986?e=1635984000&v=beta&t=WL1Cx29mU0Sd5Wq5K6cnkuntvVFPYSshkM9Ogo2p04o'></img>
-                    <p>description</p>
+                    <p>Software Developer who loves plants and burritos. </p>
+                   
                 </div>
                 <div className='about-us'>
                     <h1>Dylan Greathouse</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C4E03AQFuaGAwWaASfw/profile-displayphoto-shrink_200_200/0/1625508048937?e=1635984000&v=beta&t=LMUMDYsO4a3HY2bbpyh0z3_KjN_FBlevbwkc84i7ruI'></img>
-                    <p>Developing a passion for front and back end web development. 
-            Love any opportunity to design and create. 
-            Always looking for a chance to learn and be a better version of myself than I was the day before.
-             Strong interest in game design and cooking.</p>
+                    <p>Software Engineer Fun fact: I love to collect cook books</p>
+                  
                 </div>
                 <div className='about-us'>
                     <h1>Joseph Brown</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C5603AQH457Wk6hTvBw/profile-displayphoto-shrink_800_800/0/1625424155629?e=1635984000&v=beta&t=Cd2LHMmx6zSWGKod8sBQZ6ls7GkkJl2nhtPtdJk6RcU'></img>
-                    <p>description</p>
+                    <p>Full stack software engineer. Proficient in React, HTML, CSS and interested in new object and script languages. Passionate about creativity in all forms, bilingual, musician and always interested in a new library.  Perpetrator of tech, music, and all things outdoors. Oriented towards sustainability and building a better world. My favorite animal is the red fox. Here is a link to my linkedin profile</p>
+                  
                 </div>
             </section>
         </> );
