@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getAnimalsByHabitat, postZoo } from './Utils.js';
-
+import './Habitat-item.css';
 
 class HabitatDetail extends Component {
 
