@@ -29,7 +29,8 @@ class AboutUs extends Component {
                 <div className='about-us'>
                     <h1>Joseph Brown</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C5603AQH457Wk6hTvBw/profile-displayphoto-shrink_800_800/0/1625424155629?e=1635984000&v=beta&t=Cd2LHMmx6zSWGKod8sBQZ6ls7GkkJl2nhtPtdJk6RcU'></img>
-                    <p>description</p>
+                    <p>Full stack software engineer. Proficient in React, HTML, CSS and interested in new object and script languages. Passionate about creativity in all forms, biligual, musician and always interested in a new library. 
+            Perpetrator of tech, music, and all things outdoors. Oriented towards sustainability and building a better world.</p>
                 </div>
             </section>
         </> );
