@@ -15,7 +15,7 @@ class UserProfile extends Component {
          
             <div className='profile'>
                 <img className='profile-pic' width='60' src={profile} alt='avatar' />
-                <p>Profile Picture</p>
+                <p className='zoo-p'>Your Zoo</p>
             </div>
 
          
