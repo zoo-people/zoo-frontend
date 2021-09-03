@@ -12,7 +12,21 @@ class HomePage extends Component {
   render() { 
     return ( 
     <>
-    <h1 className='title'>Zoo-Lander!</h1>
+    <h1 className='title'>Welcome to Zoolander!</h1>
+    <div className='welcome-page'>
+      <h2>
+       The virtual space to create your very own zoo!
+       Through this app, you can make a zoo depending on what habitats you want to view.
+       </h2>
+       <h2>
+         Through picking the habitats, you will be able to find different species.
+        With Zoolander, you will have the oppurtunity to learn about those animals!
+        </h2>
+       <h2>
+         If you already have an account, just log in and you can check out your zoo. If you have yet to get admission, you can go to create account to make a zoo! Come check out our About Us page to learn about the developers.
+        
+        </h2>
+    </div>
     
     </>
     )}

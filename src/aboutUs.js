@@ -24,7 +24,10 @@ class AboutUs extends Component {
                 <div className='about-us'>
                     <h1>Dylan Greathouse</h1>
                     <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C4E03AQFuaGAwWaASfw/profile-displayphoto-shrink_200_200/0/1625508048937?e=1635984000&v=beta&t=LMUMDYsO4a3HY2bbpyh0z3_KjN_FBlevbwkc84i7ruI'></img>
-                    <p>description</p>
+                    <p>Developing a passion for front and back end web development. 
+            Love any opportunity to design and create. 
+            Always looking for a chance to learn and be a better version of myself than I was the day before.
+             Strong interest in game design and cooking.</p>
                 </div>
                 <div className='about-us'>
                     <h1>Joseph Brown</h1>
