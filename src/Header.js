@@ -14,7 +14,7 @@ class Header extends Component {
             <NavLink className='home' to='/' exact>
             <span className="App-header-text">
 ZO
-<img src="https://image.flaticon.com/icons/png/512/814/814513.png"className="rotate"/>LANDER
+<img alt='logo' src="https://image.flaticon.com/icons/png/512/814/814513.png"className="rotate"/>LANDER
 </span>
             </NavLink>
 </div>
