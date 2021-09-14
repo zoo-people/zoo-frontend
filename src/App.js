@@ -8,6 +8,7 @@ import HabitatList from './HabitatList.js';
 import Zoo from './Zoo.js';
 import AboutUs from './aboutUs';
 
+// i'd maybe move this into its own file just because its pretty big
 class HomePage extends Component {
   render() { 
     return ( 
@@ -35,7 +36,7 @@ class HomePage extends Component {
 
 class App extends Component {
   state = { 
-    token: localStorage.getItem('Token'),
+    token: localStorage.getItem('Token'), // prefer all caps for the localStorage name (its a constant)
    };
    setToken = (val) => {
      this.setState({ token: val })

@@ -11,9 +11,9 @@ import './Habitat-item.css';
 class HabitatList extends Component {
     state = { 
         habitats: [],
-        hab_id:0,
+        hab_id:0, //prefer camelcase in JS
         animals:[],
-        radio_selected:''
+        radio_selected:'' //prefer camelcase in JS
         
      }
 
