@@ -27,6 +27,7 @@ ZO
             <section className='log-auth'>
             <NavLink className='login' to='/login'>Log In</NavLink>
             <NavLink className='createaccount' to='/createaccount'>Create Account</NavLink>
+            {/* remove unused code */}
             {/* <NavLink  to='/twitter'><img className='twitter-icon' key='twitter' src='https://image.flaticon.com/icons/png/512/1384/1384033.png' alt='twitter-icon'  width />
             </NavLink>
 
