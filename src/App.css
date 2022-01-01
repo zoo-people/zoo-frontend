@@ -1,7 +1,25 @@
 html {
-  background-color:cornsilk;
+  background-image: url('https://cur.glitter-graphics.net/pub/3725/3725180dffu68sck8.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 10em;
+
 }
 
+.title{
+  text-align: center;
+  background-color: white;
+}
+
+.welcome-page{
+  border: solid;
+  border-radius: 10%;
+  text-align: center;
+  background-image:linear-gradient(rgba(255, 255, 255, 0.352), rgba(203, 90, 90, 0.724));
+  margin-left: 2em;
+  margin-right: 2em;
+  color: white;
+}
 
 .habitat-img{
 

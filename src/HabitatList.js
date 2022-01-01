@@ -44,13 +44,15 @@ class HabitatList extends Component {
     render() { 
         return ( 
             <>
-                <h1>Habitats</h1>
+                <h1 className='habitat-h1'>Choose a Habitat!</h1>
                     <div className='habitat-div'>
                         {this.state.habitats.map((item) => {
                             return <HabitatItem key={item.id} habitat={item}  onChange={this.getHabitatId}/>
                         })}
                     </div>
+                    <div className='habitat-btn'>
                     <button onClick={this.redirect}>Get Animals</button>
+                    </div>
                 
             </>
          );

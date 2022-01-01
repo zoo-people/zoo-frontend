@@ -2,7 +2,10 @@
 
 .zoo-div{
     position: relative;
-    background:radial-gradient(rgba(0, 128, 0, 0.096), rgba(165, 42, 42, 0.2));
+    background:radial-gradient(rgba(112, 219, 112, 0.814), rgba(174, 155, 155, 0.772));
+    /* border: solid; */
+    /* border-radius: 5% 0; */
+    margin: 1%;
 }
 
 .zoo-section{
@@ -14,10 +17,14 @@
 
 
 .habitat-background{
-    /* width: 50rem; */
+    width: 777px;
     max-width: 50rem;
-    opacity: 90%;
+    height: 437px;
+    max-height: 60rem;
+    /* opacity: 90%; */
     max-width: 100%;
+    /* border: solid; */
+
 }
 
 

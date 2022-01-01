@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getAnimalsByHabitat, postZoo } from './Utils.js';
-
+import './Habitat-item.css';
 
 class HabitatDetail extends Component {
 
@@ -55,7 +55,7 @@ class HabitatDetail extends Component {
         return (
             <>   
                
-                <h1>
+                <h1 className='animal-title'>
                     Animals
                 </h1>
                 <div>
@@ -65,10 +65,10 @@ class HabitatDetail extends Component {
                     {this.state.animals.map((item) => (
                         <> 
                         <div className='animal-card'>
-                        <h1>{item.name}</h1>
                         <input type="checkbox" name="animal-pic" value={item.id} onChange={() => this.handleSelected(item.id)}>
                         </input>
-                        <img src={item.icon_url} key={item.name} alt={item.name} />
+                        <h1>{item.name}</h1>
+                        <img className='animal-icon' src={item.icon_url} key={item.name} alt={item.name} />
                         </div>
                         </>
                     )

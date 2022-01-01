@@ -1,5 +1,5 @@
 .log-section{
-    background-color: rgba(250, 250, 250, 0.841);
+    background-image:linear-gradient(rgba(255, 255, 255, 0.745), rgba(203, 90, 90, 0.724));
     border:solid;
     border-width: .5rem;
     border-radius: 2rem;
@@ -13,12 +13,14 @@
 }
 
 .log-title{
-    background-color: rgb(3, 193, 15);
-    border: double;
+    background-color: rgba(53, 65, 41, 0.986);
+    border: solid black .2em;
+    border-radius: 30%;
     text-align: center;
     font-family: fantasy;
     font-size: 2rem;
     width: 23rem;
+    color: white;
 }
 
 .form{
