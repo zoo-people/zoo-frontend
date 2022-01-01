@@ -23,6 +23,6 @@ html {
 
 .habitat-img{
 
-  height:100px;
-  width:100px;
+  height:100vh;
+  width:100vw;
 }

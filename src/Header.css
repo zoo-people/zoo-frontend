@@ -4,6 +4,7 @@ header {
     background-size:100%;
     background-repeat: repeat;
     height: 10rem;
+    width: 110vw;
 }
 
 a {
@@ -18,92 +19,60 @@ a:hover {
 
 .header-section{
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* text-align: center; */
     height: 10rem;
     width: 100%;
 }
 
+.header-section.log-auth {
+    justify-content: flex-end;
+}
+
 .home {
-    margin-right: 20%;
     font-size: 1.5rem;
     text-align: center;
-    width: 100%;
     font-family: fantasy;
+    margin: 4%;
 }
 
  .login {
     display:inline-block;
     font-family: fantasy;
-    padding: 1%;
     font-size: 1.2rem;
-    /* background-color: rgba(255, 255, 255, 0.445); */
-    /* border:solid; */
-    height: 3.5em;
-    width: 3.5em;
-    margin-right: 5px;
+    /* height: 3.5em;
+    width: 3.5em; */
 }
 
-.createaccount{
+.createaccount {
     display:inline-block;
     font-family: fantasy;
     padding: 1%;
     font-size: 1.2rem;
-    /* background-color: rgba(255, 255, 255, 0.445); */
-    /* border: solid; */
-    height: 3.5em;
-    width: 3.5em;
-    
+    /* height: 3.5em;
+    width: 3.5em;     */
 }
 
-.log-auth{
-    margin-right: 10%;
+.log-auth {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: center;
-    /* border: solid */
+    padding: 2%;
+    height: 7rem;
 }
 
-.icons {
+/* .icons {
     display: flex;
-    /* border: solid; */
+    border: solid;
     margin-top: 6rem;
-}
-
-.twitter-icon {
-    height: 3.5em;
-    width: 3.5em;
-    background-color:yellow;
-    color: white;
-    margin-inline:1rem;
-    /* border: solid; */
-}
-
-.twitter-icon:hover {
-    background-color: yellowgreen;
-}
-
-.li-icon {
-    height: .5em;
-    width: .5em;
-    background-color:blue;
-    color: white;
-    /* border: solid; */
- 
-}
-
-.li-icon:hover {
-    background-color: darkblue;
-}
+} */
 
 .aboutus{
-    display:inline-block;
     font-family: fantasy;
     font-size: 1.1em;
-    /* background-color: rgba(255, 255, 255, 0.445); */
-    height: 4em;
-    width: 5.5em;
-    margin-right: 5px;
-    margin-top: 4px;
     text-align: center;
 }
 
@@ -118,18 +87,16 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-content: center;
-    font-size: 5rem;
-    font-weight: 900;
-    /* width: 100%; */
-    margin: 3rem;
+    align-content: center; 
+    font-size: 3.5rem;
+    font-weight: 10rem;
     color: rgba(241, 245, 237, 0.884);
 }
   
   .rotate{
     width:4.5rem;
     height:4.5rem;
-    padding:5px;
+    padding: 0.5rem;
     animation: rotation infinite 15s linear;
   }
 
@@ -143,6 +110,6 @@ a:hover {
     }
   }
   
-span.App-header-text {
+/* span.App-header-text {
     margin-left: 10rem;
-}
+} */

@@ -34,7 +34,6 @@ class Zoo extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.state.selectedIds.map(async(item) => {
-            console.log('HELLO I AM HEREa')
             await deleteAnimal(this.props.token, {
                user_id: 1,
                animal_id: item,
@@ -68,9 +67,14 @@ class Zoo extends Component {
             {this.state.zoos.map((item) => (
                 <><div
                     className='zoo-div' key={item.animal_id}>
-                    <img className='habitat-background' src={item.image} key={item.name} alt={item.name} />
-
-                    <img className='animal-class' src={item.icon_url} alt={item.name} />
+                    {/* <img className='habitat-background' src={item.image} key={item.name} alt={item.name} /> */}
+                    <div style={{backgroundImage: `url(${item.image})`}} className='habitat-background'>
+                        <img 
+                            className='animal-class' 
+                            src={item.icon_url}                             
+                            alt={item.name} 
+                        />
+                    </div>
 
                     <section className='animal-info'>
                         
