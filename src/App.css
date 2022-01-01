@@ -2,8 +2,8 @@ html {
   background-image: url('https://cur.glitter-graphics.net/pub/3725/3725180dffu68sck8.gif');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 10em;
-
+  background-position-y: 10em;   
+  background-color: rgb(53, 65, 41);
 }
 
 .title{
