@@ -68,16 +68,18 @@ class Zoo extends Component {
           {this.state.zoos.map((item) => (
             <>
               <div className='zoo-div' key={item.animal_id}>
-                <img 
-                  className='habitat-background' 
-                  src={item.image} key={item.name} 
-                  alt={item.name}
-                />
-                <img 
-                  className='animal-class' 
-                  src={item.icon_url} 
-                  alt={item.name} 
-                />
+                {/* <div className='scene'> */}
+                  <img 
+                    className='habitat-background' 
+                    src={item.image} key={item.name} 
+                    alt={item.name}
+                  />
+                  <img 
+                    className='animal-class' 
+                    src={item.icon_url} 
+                    alt={item.name} 
+                  />
+                {/* </div> */}
               <section className='animal-info'>                    
                 <input 
                   type='checkbox' 
