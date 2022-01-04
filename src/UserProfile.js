@@ -2,26 +2,21 @@ import React, { Component } from 'react';
 import { getProfilePic } from  './Utils.js';
 import './UserProfile.css'
 class UserProfile extends Component {
-    state = {  }
-
-
+    state = {  }    
     
-    
-    render() { 
-     const profile = getProfilePic();
-     console.log(profile);
-        return ( 
-
-         
-            <div className='profile'>
-                <img className='profile-pic' width='60' src={profile} alt='avatar' />
-                <p className='zoo-p'>Your Zoo</p>
-            </div>
-
-         
-
-         );
-    }
+  render() { 
+    const profile = getProfilePic();
+      return (          
+        <div className='profile'>
+            <img 
+              className='profile-pic' 
+              src={profile} 
+              alt='avatar' 
+            />
+            <p className='zoo-p'>Your Zoo</p>
+        </div>
+      );
+  }
 }
  
 export default UserProfile;

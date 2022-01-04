@@ -1,14 +1,56 @@
+.zoo-section {
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    justify-content: center;
+    text-align: center;
+}
 
 
 .zoo-div{
-    position: relative;
+    position: inline-flex;
     background:radial-gradient(rgba(112, 219, 112, 0.814), rgba(174, 155, 155, 0.772));
-    /* border: solid; */
-    /* border-radius: 5% 0; */
     margin: 1%;
+    height: 47.5rem;
 }
 
-.zoo-section{
+
+.habitat-background {
+  /* margin-right: 20%; */
+  width: 80vw;
+  height: 40vh;
+  padding: 3%;
+}
+
+.animal-class {
+    position:relative;
+    width: 8rem;
+    height: 8rem;
+    margin: 6rem;
+    bottom: 16.75rem;
+    right: 5rem;
+    animation: left-to-right infinite 4s ease-in-out alternate;
+}
+
+.animal-info {
+  position: relative;
+  bottom: 21.50rem;
+}
+
+@media (min-width: 660px) {
+  .habitat-background {
+      width: 90vw;
+      height: 60vh;
+      max-height: 70vh;
+  }
+
+  .animal-class {
+    position: relative;
+    bottom: 12.75;
+  }
+}
+
+/* .zoo-section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1%;
@@ -21,9 +63,7 @@
     max-width: 50rem;
     height: 437px;
     max-height: 60rem;
-    /* opacity: 90%; */
     max-width: 100%;
-    /* border: solid; */
 
 }
 
@@ -34,7 +74,6 @@
     margin: 6rem;
     top: 8.5rem;
     left: 15rem; 
-    /* padding: 1px; */
     position:absolute;
     animation: left-to-right infinite 4s ease-in-out alternate;
 }
@@ -47,7 +86,7 @@
 .animal-info{
     text-align: center;
     padding: 1%;
-}
+} */
 
 
 .inActive {

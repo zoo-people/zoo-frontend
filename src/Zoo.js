@@ -58,49 +58,54 @@ class Zoo extends Component {
     this.props.history.push(`/habitats`)
 }
    
-    render() { 
-        const isActive = this.state.isActive
-        return (  
+  render() { 
+    const isActive = this.state.isActive
+      return (  
+      <>
+        <UserProfile />
+        <section className='zoo-section'>
+          <form>
+          {this.state.zoos.map((item) => (
             <>
-            <UserProfile />
-            <form>
-                <section className='zoo-section'>
-            {this.state.zoos.map((item) => (
-                <><div
-                    className='zoo-div' key={item.animal_id}>
-                    <img className='habitat-background' src={item.image} key={item.name} alt={item.name} />
-
-                    <img className='animal-class' src={item.icon_url} alt={item.name} />
-
-                    <section className='animal-info'>
-                        
-                    <input type='checkbox' className={isActive ? 'isActive' : 'inActive' } value={item.animal_id} onChange={this.handleDelete}></input>
-
-                    <h1 className='animal-name'>{item.name}</h1>
-                    <h2>{item.species_name}</h2>
-                    <h3>{item.diet}</h3>
-                    <p>{item.description}</p>
-                    </section>
-
-              
-                </div>
-                
-                </>
-               
-            ))}
-            </section>
-            <button onClick={this.handleSubmit} id="submit" className={isActive ? 'isActive' : 'inActive'}>Update</button>
-            </form>
-            <button onClick={this.handleToggle}>Delete</button>
-            <button onClick={this.redirectHabitat}>Add More Animals</button>
-            
-            </>
-            //delete toggle/button converts divs to form
-            //on change reveals checkboxes
-            //new submit to remove animals from zoo
-            //cancel form
-        );
-    }
+              <div className='zoo-div' key={item.animal_id}>
+                <img 
+                  className='habitat-background' 
+                  src={item.image} key={item.name} 
+                  alt={item.name}
+                />
+                <img 
+                  className='animal-class' 
+                  src={item.icon_url} 
+                  alt={item.name} 
+                />
+              <section className='animal-info'>                    
+                <input 
+                  type='checkbox' 
+                  className={isActive ? 'isActive' : 'inActive' } 
+                  value={item.animal_id} 
+                  onChange={this.handleDelete}
+                />
+                <h3 className='animal-name'>{item.name}</h3>
+                <h4>{item.species_name}</h4>
+                <h5>{item.diet}</h5>
+                <p>{item.description}</p>
+              </section>                
+              </div>              
+            </>          
+          ))}
+          <button onClick={this.handleSubmit} id="submit" className={isActive ? 'isActive' : 'inActive'}>Update</button>
+          </form>
+      </section>
+      <button onClick={this.handleToggle}>Delete</button>
+      <button onClick={this.redirectHabitat}>Add More Animals</button>
+      
+      </>
+      //delete toggle/button converts divs to form
+      //on change reveals checkboxes
+      //new submit to remove animals from zoo
+      //cancel form
+  );
+}
 }
  
 export default Zoo;

@@ -41,7 +41,7 @@ Fun Fact: On my free time, I like to paint/draw.
                 </div>
                 <div className='about-us'>
                     <h1>Joseph Brown</h1>
-                    <img className='headshot' alt='developer' src='https://media-exp1.licdn.com/dms/image/C5603AQH457Wk6hTvBw/profile-displayphoto-shrink_800_800/0/1625424155629?e=1635984000&v=beta&t=Cd2LHMmx6zSWGKod8sBQZ6ls7GkkJl2nhtPtdJk6RcU'></img>
+                    <img className='headshot' alt='developer' src='https://lh3.googleusercontent.com/pw/AM-JKLVJ9foZGxxjhG-wOyLkCRbOvV2tLKvlvSoW_hZwAFCZntYZ5ejKldjabwBcBtOU_jgT3jcLtHkHj6ltAu_yzYjPRYeuRwtioSo4dQj2O055Rr8UyqVC9lZ3lftyk1EXDWkfqBm1tMTOvHh6tWS-ogM=w2399-h1799-no?authuser=2' />
                     <p>Full stack software engineer. Proficient in React, HTML, CSS and interested in new object and script languages. Passionate about creativity in all forms, bilingual, musician and always interested in a new library.  Perpetrator of tech, music, and all things outdoors. Oriented towards sustainability and building a better world. My favorite animal is the red fox. Here is a link to my linkedin profile</p>
                     <a href='https://www.linkedin.com/in/joseph-k-brown/2a211/'><img className='li-icon' key='linkedin' src='https://image.flaticon.com/icons/png/128/1384/1384030.png' alt='LinkedIn-icon'   />LinkedIn Profile</a>
                   
